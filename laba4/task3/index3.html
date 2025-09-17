@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Маскирование номера карты</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="index3.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; max-width:720px; margin:24px; line-height:1.5 }
+    label { display:block; margin:8px 0; }
+    input[type="text"], input[type="number"] { padding:6px; width:100%; max-width:360px }
+    button { margin-top:10px; padding:8px 12px; cursor:pointer }
+    pre { background:#f4f4f4; padding:12px; border-radius:6px }
+    .note { color:#666; font-size:0.9rem }
+  </style>
+</head>
+<body>
+  <h2>Маскирование номера банковской карты</h2>
+
+  <label>
+    Номер карты:
+    <input type="text" id="cardInput" placeholder="Например: 4815154823541789" value="4815154823541789">
+  </label>
+
+  <label>
+    Символ маски (по умолчанию X):
+    <input type="text" id="maskChar" placeholder="X" maxlength="2" value="X">
+  </label>
+
+  <button id="maskBtn">Маскировать</button>
+
+  <h3>Результат:</h3>
+  <pre id="output"></pre>
+
+  <p class="note">
+    Правило: видны первые 6 и последние 4 символа. Если длина входа меньше 10 — возвращается оригинал без изменений.
+  </p>
+</body>
+</html>

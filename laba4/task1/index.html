@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Генератор диапазона</title>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <h2>Генератор числового диапазона</h2>
+
+  <label>
+    Начало: <input type="number" id="start" value="1">
+  </label>
+  <br><br>
+  <label>
+    Конец: <input type="number" id="end" value="10">
+  </label>
+  <br><br>
+  <label>
+    Шаг: <input type="number" id="step" value="1">
+  </label>
+  <br><br>
+
+  <button onclick="generate()">Сгенерировать</button>
+
+  <h3>Результат:</h3>
+  <pre id="output"></pre>
+</body>
+</html>
